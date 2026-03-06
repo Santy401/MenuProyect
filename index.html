@@ -1,12 +1,544 @@
-<!DOCTYPE html>
-<html lang="en">
+﻿<!DOCTYPE html>
+<html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MenuRestaurant</title>
+    <meta name="description"
+        content="La Mesa - Sabores auténticos, experiencias inolvidables. Descubre nuestro menú de platos exclusivos preparados con ingredientes frescos.">
+    <title>La Mesa - Sabores Auténticos</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=Playfair+Display:ital,wght@0,700;1,700&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
-    Porno
+
+    <!-- ===== NAVBAR ===== -->
+    <header class="navbar" id="navbar">
+        <div class="container nav-container">
+            <a href="#" class="logo">La <span>Mesa</span><sup>®</sup></a>
+            <nav class="nav-links">
+                <a href="#chef">Chef</a>
+                <a href="#menu">Menú</a>
+                <a href="#jobs">Únete</a>
+                <a href="#location">Ubicaciones</a>
+                <a href="#contact">Contacto</a>
+            </nav>
+            <a href="#order" class="btn btn-red">Pedir Ahora →</a>
+            <button class="hamburger" id="hamburger" aria-label="Menú">&#9776;</button>
+        </div>
+        <div class="mobile-menu" id="mobileMenu">
+            <a href="#chef">Chef</a>
+            <a href="#menu">Menú</a>
+            <a href="#jobs">Únete</a>
+            <a href="#location">Ubicaciones</a>
+            <a href="#contact">Contacto</a>
+            <a href="#order" class="btn btn-red">Pedir Ahora</a>
+        </div>
+    </header>
+
+    <!-- ===== HERO ===== -->
+    <section class="hero" id="home">
+        <div class="container hero-container">
+            <div class="hero-text">
+                <p class="hero-tag">🔥 Restaurante Mejor Valorado</p>
+                <h1>Sabores Auténticos,<br>Experiencia<br>Inolvidable!</h1>
+                <p class="hero-desc">Nos enorgullece preparar platos deliciosos inspirados en recetas tradicionales,
+                    usando solo los mejores ingredientes. ¡Explora nuestro menú y saborea la diferencia!</p>
+                <div class="hero-btns">
+                    <a href="#menu" class="btn btn-red">Pedir Ahora →</a>
+                    <a href="#chef" class="btn btn-outline">Nuestra Historia</a>
+                </div>
+                <div class="hero-stats">
+                    <div class="stat"><span>500+</span>
+                        <p>Platos en Menú</p>
+                    </div>
+                    <div class="stat"><span>98%</span>
+                        <p>Clientes Felices</p>
+                    </div>
+                    <div class="stat"><span>15+</span>
+                        <p>Años Activos</p>
+                    </div>
+                </div>
+            </div>
+            <div class="hero-img">
+                <div class="hero-glow"></div>
+                <img src="hero_burger.png" alt="Hamburguesa Gourmet Signature">
+                <div class="hero-badge">
+                    <span class="badge-icon">⭐</span>
+                    <div>
+                        <strong>4.9/5</strong>
+                        <small>2.400+ Reseñas</small>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="hero-scroll-indicator">
+            <span></span>
+        </div>
+    </section>
+
+    <!-- ===== ABOUT / CHEF ===== -->
+    <section class="about" id="chef">
+        <div class="container about-container">
+            <div class="about-imgs">
+                <div class="about-img-main">
+                    <img src="restaurant_interior.png" alt="Interior del restaurante">
+                </div>
+                <div class="about-img-small">
+                    <img src="signature_dish.png" alt="Plato estrella">
+                </div>
+                <div class="about-tag-float">
+                    <span>🏆</span>
+                    <div>
+                        <strong>Premio Nacional</strong>
+                        <small>Especial del Chef</small>
+                    </div>
+                </div>
+            </div>
+            <div class="about-text">
+                <p class="section-tag">Nuestra Historia</p>
+                <h2>Pasión por la Buena Comida,<br>Servida con Amor</h2>
+                <p>En La Mesa sabemos que la comida es sinónimo de familia. Ya seas amante de los platos fuertes, fan de
+                    los sabores únicos o fanático de lo verde, tenemos algo especial para ti.</p>
+                <p>Bienvenido a un lugar donde la comida se encuentra con la pasión — donde cada plato cuenta una
+                    historia y cada bocado crea un recuerdo.</p>
+                <div class="about-features">
+                    <div class="feature"><span>✓</span> Ingredientes locales frescos a diario</div>
+                    <div class="feature"><span>✓</span> Recetas creadas por chefs premiados</div>
+                    <div class="feature"><span>✓</span> Prácticas sostenibles y ecológicas</div>
+                </div>
+                <a href="#menu" class="btn btn-red">Explorar Menú →</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== MENU CATEGORIES ===== -->
+    <section class="menu" id="menu">
+        <div class="container">
+            <p class="section-tag centered">Nuestros Sabores</p>
+            <h2 class="centered">Opciones Deliciosas, Hechas para Ti</h2>
+            <p class="section-desc centered">Explora nuestro menú cuidadosamente elaborado con ingredientes frescos y
+                sabores intensos.
+            </p>
+
+            <div class="menu-tabs">
+                <button class="tab-btn active" data-tab="all">Todos</button>
+                <button class="tab-btn" data-tab="signature">Platos Estrella</button>
+                <button class="tab-btn" data-tab="grill">Parrilla &amp; Kebabs</button>
+                <button class="tab-btn" data-tab="wraps">Wraps &amp; Sándwiches</button>
+                <button class="tab-btn" data-tab="veggie">Opción Veggie</button>
+            </div>
+
+            <div class="menu-grid">
+                <!-- Signature -->
+                <div class="menu-card" data-category="signature">
+                    <div class="card-img">
+                        <img src="signature_dish.png" alt="Platos Estrella">
+                        <div class="card-badge">Elección del Chef</div>
+                    </div>
+                    <div class="card-body">
+                        <div class="card-top">
+                            <h3>Platos Estrella</h3>
+                            <span class="price">Desde $14.99</span>
+                        </div>
+                        <p>Cortes premium marinados en especias caseras, servidos con nuestra salsa exclusiva y
+                            acompañamientos de temporada.</p>
+                        <div class="card-footer">
+                            <div class="rating">⭐ 4.9 <small>(312)</small></div>
+                            <a href="#order" class="btn-small">Pedir →</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Grill -->
+                <div class="menu-card featured" data-category="grill">
+                    <div class="card-img">
+                        <img src="grill_kebabs.png" alt="Parrilla y Kebabs">
+                        <div class="card-badge">Popular</div>
+                    </div>
+                    <div class="card-body">
+                        <div class="card-top">
+                            <h3>Parrilla &amp; Kebabs</h3>
+                            <span class="price">Desde $12.99</span>
+                        </div>
+                        <p>Jugosos kebabs a la llama con verduras en brocheta, bañados con nuestro glaseado secreto.</p>
+                        <div class="card-footer">
+                            <div class="rating">⭐ 4.8 <small>(482)</small></div>
+                            <a href="#order" class="btn-small">Pedir →</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Wraps -->
+                <div class="menu-card" data-category="wraps">
+                    <div class="card-img">
+                        <img src="wraps_sandwiches.png" alt="Wraps y Sándwiches">
+                        <div class="card-badge">Nuevo</div>
+                    </div>
+                    <div class="card-body">
+                        <div class="card-top">
+                            <h3>Wraps &amp; Sándwiches</h3>
+                            <span class="price">Desde $9.99</span>
+                        </div>
+                        <p>Wraps cargados y sándwiches artesanales con rellenos frescos, perfectos para cualquier
+                            momento del día.</p>
+                        <div class="card-footer">
+                            <div class="rating">⭐ 4.7 <small>(201)</small></div>
+                            <a href="#order" class="btn-small">Pedir →</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Veggie -->
+                <div class="menu-card" data-category="veggie">
+                    <div class="card-img">
+                        <img src="hero_burger.png" alt="Opción Veggie">
+                        <div class="card-badge">Saludable</div>
+                    </div>
+                    <div class="card-body">
+                        <div class="card-top">
+                            <h3>Opción Veggie</h3>
+                            <span class="price">Desde $11.99</span>
+                        </div>
+                        <p>Obras maestras vegetales llenas de color y sabor — la prueba de que la comida veggie nunca es
+                            aburrida.</p>
+                        <div class="card-footer">
+                            <div class="rating">⭐ 4.8 <small>(178)</small></div>
+                            <a href="#order" class="btn-small">Pedir →</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== JOBS ===== -->
+    <section class="jobs" id="jobs">
+        <div class="container">
+            <p class="section-tag centered">Únete a la Familia</p>
+            <h2 class="centered">¡Únete a Nuestro Equipo!</h2>
+            <p class="section-desc centered">¿Apasionado por la buena comida y el servicio al cliente? ¡Estamos
+                contratando!</p>
+
+            <div class="jobs-filter">
+                <input type="text" placeholder="Buscar cargo..." class="filter-input">
+                <select class="filter-select">
+                    <option>Selecciona tu ubicación preferida</option>
+                    <option>Las Cocas</option>
+                    <option>Los Ángeles</option>
+                    <option>Chicago</option>
+                    <option>Miami</option>
+                </select>
+                <select class="filter-select">
+                    <option>Tamaño del establecimiento</option>
+                    <option>Pequeño</option>
+                    <option>Mediano</option>
+                    <option>Grande</option>
+                </select>
+            </div>
+
+            <div class="jobs-list">
+                <div class="job-item">
+                    <div class="job-info">
+                        <h4>Personal de Cocina</h4>
+                        <p>Cocina platos deliciosos y contribuye al éxito del equipo.</p>
+                        <div class="job-tags">
+                            <span class="tag">🕐 Medio tiempo</span>
+                            <span class="tag">🕐 Tiempo completo</span>
+                        </div>
+                    </div>
+                    <a href="#contact" class="btn btn-red">Aplicar Ahora →</a>
+                </div>
+
+                <div class="job-item">
+                    <div class="job-info">
+                        <h4>Cajeros</h4>
+                        <p>Brinda una experiencia excelente al cliente en caja.</p>
+                        <div class="job-tags">
+                            <span class="tag">🕐 Medio tiempo</span>
+                            <span class="tag">🕐 Tiempo completo</span>
+                        </div>
+                    </div>
+                    <a href="#contact" class="btn btn-red">Aplicar Ahora →</a>
+                </div>
+
+                <div class="job-item">
+                    <div class="job-info">
+                        <h4>Repartidores</h4>
+                        <p>Sé la cara de La Mesa y lleva felicidad a nuestros clientes.</p>
+                        <div class="job-tags">
+                            <span class="tag">🕐 Medio tiempo</span>
+                            <span class="tag">🕐 Flexible</span>
+                        </div>
+                    </div>
+                    <a href="#contact" class="btn btn-red">Aplicar Ahora →</a>
+                </div>
+
+                <div class="job-item">
+                    <div class="job-info">
+                        <h4>Gerentes de Restaurante</h4>
+                        <p>Lidera e inspira al equipo para brindar un servicio excepcional.</p>
+                        <div class="job-tags">
+                            <span class="tag">🕐 Tiempo completo</span>
+                        </div>
+                    </div>
+                    <a href="#contact" class="btn btn-red">Aplicar Ahora →</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== LOCATION ===== -->
+    <section class="location" id="location">
+        <div class="container location-container">
+            <div class="location-map">
+                <div class="map-placeholder">
+                    <div class="map-pin">📍</div>
+                    <div class="map-pulse"></div>
+                    <svg viewBox="0 0 400 300" xmlns="http://www.w3.org/2000/svg" class="map-svg">
+                        <rect width="400" height="300" fill="#1a1a1a" rx="16" />
+                        <path d="M50,150 Q100,80 180,120 Q240,150 320,100 Q360,80 380,110" stroke="#e31c1c"
+                            stroke-width="3" fill="none" opacity="0.6" />
+                        <path d="M60,200 Q120,170 200,180 Q280,190 350,160" stroke="#e31c1c" stroke-width="2"
+                            fill="none" opacity="0.4" />
+                        <circle cx="200" cy="140" r="12" fill="#e31c1c" opacity="0.9" />
+                        <circle cx="200" cy="140" r="20" fill="#e31c1c" opacity="0.3" />
+                        <circle cx="200" cy="140" r="30" fill="#e31c1c" opacity="0.1" />
+                        <circle cx="120" cy="170" r="6" fill="#fff" opacity="0.5" />
+                        <circle cx="300" cy="110" r="6" fill="#fff" opacity="0.5" />
+                        <circle cx="80" cy="120" r="6" fill="#fff" opacity="0.5" />
+                        <text x="200" y="260" text-anchor="middle" fill="#666" font-size="12"
+                            font-family="Outfit">Ubicaciones La Mesa</text>
+                    </svg>
+                </div>
+            </div>
+            <div class="location-text">
+                <p class="section-tag">Encuéntranos</p>
+                <h2>Encuentra La Mesa<br>Cerca de Ti</h2>
+                <p>Con sucursales en todo el país, la comida deliciosa siempre está a la vuelta de la esquina.</p>
+                <a href="tel:+18005554268" class="btn btn-red">📞 Llámanos Ahora</a>
+                <div class="locations-list">
+                    <div class="loc-item">
+                        <strong>🗽 Sucursal Centro</strong>
+                        <p>123 Calle Principal, NY 10001<br><small>Lun–Dom: 10am – 11pm</small></p>
+                    </div>
+                    <div class="loc-item">
+                        <strong>🌅 Distrito Riverside</strong>
+                        <p>45 Harbor Ave, LA 90001<br><small>Lun–Dom: 11am – 12am</small></p>
+                    </div>
+                    <div class="loc-item">
+                        <strong>🏙️ Centro de la Ciudad</strong>
+                        <p>78 Wacker Dr, Chicago 60601<br><small>Lun–Dom: 10am – 10pm</small></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== SOCIAL / GALLERY ===== -->
+    <section class="social" id="social">
+        <div class="container">
+            <p class="section-tag centered">Redes Sociales</p>
+            <h2 class="centered">Síguenos y Mantente Conectado</h2>
+            <p class="section-desc centered">¡Mira las últimas fotos, ofertas especiales y deliciosas imágenes de
+                comida!</p>
+
+            <div class="gallery-grid">
+                <div class="gallery-item tall">
+                    <img src="restaurant_interior.png" alt="Interior del restaurante">
+                    <div class="gallery-overlay"><span>❤ 2.4k</span></div>
+                </div>
+                <div class="gallery-item">
+                    <img src="hero_burger.png" alt="Hamburguesa">
+                    <div class="gallery-overlay"><span>❤ 1.8k</span></div>
+                </div>
+                <div class="gallery-item">
+                    <img src="grill_kebabs.png" alt="Kebabs">
+                    <div class="gallery-overlay"><span>❤ 3.1k</span></div>
+                </div>
+                <div class="gallery-item">
+                    <img src="signature_dish.png" alt="Plato estrella">
+                    <div class="gallery-overlay"><span>❤ 2.9k</span></div>
+                </div>
+                <div class="gallery-item">
+                    <img src="wraps_sandwiches.png" alt="Wraps">
+                    <div class="gallery-overlay"><span>❤ 1.5k</span></div>
+                </div>
+            </div>
+
+            <div class="social-links">
+                <a href="#" class="social-link">📸 @lamesa.oficial</a>
+                <a href="#" class="social-link">🐦 @LaMesaRest</a>
+                <a href="#" class="social-link">👍 La Mesa Restaurante</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== CONTACT ===== -->
+    <section class="contact" id="contact">
+        <div class="container contact-container">
+            <div class="contact-info">
+                <p class="section-tag">Contáctanos</p>
+                <h2>¡Ponte en<br>Contacto con Nosotros!</h2>
+                <div class="contact-detail">
+                    <span>📍</span>
+                    <div>
+                        <strong>Sede Principal</strong>
+                        <p>123 Calle Comida, Nueva York, NY 10001</p>
+                    </div>
+                </div>
+                <div class="contact-detail">
+                    <span>📧</span>
+                    <div>
+                        <strong>Escríbenos</strong>
+                        <p>hola@lamesa.com</p>
+                    </div>
+                </div>
+                <div class="contact-detail">
+                    <span>📞</span>
+                    <div>
+                        <strong>Llámanos</strong>
+                        <p>+1 (800) 555-4268</p>
+                    </div>
+                </div>
+            </div>
+
+            <form class="contact-form" id="contactForm">
+                <div class="form-row">
+                    <div class="form-group">
+                        <label>Nombre</label>
+                        <input type="text" id="firstName" placeholder="Carlos" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Apellido</label>
+                        <input type="text" id="lastName" placeholder="García" required>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label>Correo Electrónico</label>
+                        <input type="email" id="email" placeholder="tu@correo.com" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Número de Teléfono</label>
+                        <input type="tel" id="phone" placeholder="+1 (000) 000-0000">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label>Mensaje</label>
+                    <textarea id="message" placeholder="Escribe tu mensaje aquí..." rows="4" required></textarea>
+                </div>
+                <button type="submit" class="btn btn-red full-width" id="submitBtn">Enviar Mensaje →</button>
+                <div class="form-success" id="formSuccess">✅ ¡Mensaje enviado! Te responderemos pronto.</div>
+            </form>
+        </div>
+    </section>
+
+    <!-- ===== BRANCH SHOWCASE ===== -->
+    <section class="branches">
+        <div class="branches-grid">
+            <div class="branch-item">
+                <img src="restaurant_interior.png" alt="Sucursal Nueva York">
+                <div class="branch-info">
+                    <strong>Nueva York</strong>
+                    <p>123 Main Street, NY 10001</p>
+                </div>
+            </div>
+            <div class="branch-item">
+                <img src="grill_kebabs.png" alt="Sucursal Los Ángeles">
+                <div class="branch-info">
+                    <strong>Los Ángeles</strong>
+                    <p>500 Sunset Blvd, LA 90028</p>
+                </div>
+            </div>
+            <div class="branch-item">
+                <img src="signature_dish.png" alt="Sucursal Chicago">
+                <div class="branch-info">
+                    <strong>Chicago</strong>
+                    <p>200 Wacker Drive, IL 60601</p>
+                </div>
+            </div>
+            <div class="branch-item">
+                <img src="wraps_sandwiches.png" alt="Sucursal Miami">
+                <div class="branch-info">
+                    <strong>Miami</strong>
+                    <p>910 Ocean Drive, FL 33139</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== FOOTER ===== -->
+    <footer class="footer">
+        <div class="container footer-grid">
+            <div class="footer-brand">
+                <a href="#" class="logo">La <span>Mesa</span><sup>®</sup></a>
+                <p>Un Gran Viaje Gastronómico,<br>Un Bocado a la Vez.</p>
+                <div class="footer-socials">
+                    <a href="#" aria-label="Facebook">f</a>
+                    <a href="#" aria-label="Instagram">in</a>
+                    <a href="#" aria-label="Twitter">tw</a>
+                    <a href="#" aria-label="TikTok">tt</a>
+                </div>
+            </div>
+
+            <div class="footer-col">
+                <h5>Páginas</h5>
+                <a href="#home">Inicio</a>
+                <a href="#chef">Nosotros</a>
+                <a href="#menu">Menú</a>
+                <a href="#jobs">Empleos</a>
+                <a href="#contact">Contacto</a>
+            </div>
+
+            <div class="footer-col">
+                <h5>Productos</h5>
+                <a href="#menu">Platos Estrella</a>
+                <a href="#menu">Parrilla &amp; Kebabs</a>
+                <a href="#menu">Wraps</a>
+                <a href="#menu">Opción Veggie</a>
+                <a href="#menu">Especiales de Temporada</a>
+            </div>
+
+            <div class="footer-newsletter">
+                <h5>Suscríbete para ofertas exclusivas y novedades</h5>
+                <div class="newsletter-form">
+                    <input type="email" placeholder="tu@correo.com" id="newsletterEmail">
+                    <button class="btn btn-red" id="subscribeBtn">Suscribirme →</button>
+                </div>
+                <div class="footer-bottom-links">
+                    <a href="#">Política de Privacidad</a>
+                    <a href="#">Términos y Condiciones</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>© 2024 La Mesa Restaurante. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <!-- ===== SCROLL TO TOP ===== -->
+    <button class="scroll-top" id="scrollTop" aria-label="Scroll to top">↑</button>
+
+    <!-- ===== ORDER MODAL ===== -->
+    <div class="modal-overlay" id="orderModal">
+        <div class="modal">
+            <button class="modal-close" id="modalClose">✕</button>
+            <div class="modal-icon">🍔</div>
+            <h3>Pedidos en Línea</h3>
+            <p>¡Nuestro sistema de pedidos en línea estará disponible pronto! Mientras tanto, llámanos para hacer tu
+                pedido.</p>
+            <a href="tel:+18005554268" class="btn btn-red full-width">📞 Llamar para Pedir</a>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
 </body>
+
 </html>
